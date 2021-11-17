@@ -19,7 +19,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def createRandomBase64String(n = 50):
+def createRandomBase64String(n = 10):
     r_str = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(n))
     b = base64.urlsafe_b64encode(r_str.encode("ascii"))
     return str(b, "ascii")
