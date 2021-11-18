@@ -9,9 +9,9 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Get bot info
 with open("./token", 'r+') as f:
-    API_TOKEN = str(f.readline())
+    API_TOKEN = str(f.readline()).strip()
 with open("./owner", 'r+') as f:
-    OWNER = str(f.readline())
+    OWNER = str(f.readline()).strip()
     ALLOWED_USER_FILTER = Filters.user(username=OWNER)
 
 # Enable logging
